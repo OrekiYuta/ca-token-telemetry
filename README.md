@@ -120,6 +120,18 @@ Uninstall:
 bash init/uninstall-schedule-macos.sh
 ```
 
+## Deployment & conflict-free syncing
+
+`data/manifest.json` is **not committed** — it's git-ignored and regenerated:
+
+- **locally** whenever you run `npm run collect` / `npm run serve` (for preview), and
+- **on deploy** by Vercel's `buildCommand` (`node src/build-manifest.mjs`), which
+  scans `data/` and writes a fresh manifest before publishing the static site.
+
+Because each device only ever commits its own `data/<device>/` folder and nothing
+touches a shared file, multiple machines can push on their own schedule with **no
+merge conflicts** — `pull --rebase` always replays cleanly.
+
 ## License
 
 MIT License — see [LICENSE](LICENSE).

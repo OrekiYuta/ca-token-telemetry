@@ -1,6 +1,7 @@
 // Git publishing: stage data, commit, rebase onto remote, push.
-// Devices only write data/<device>/, so commits never conflict in content;
-// `pull --rebase` cleanly replays this device's commit on top of others'.
+// Devices only write data/<device>/ (manifest.json is git-ignored and
+// generated at build time), so commits touch disjoint files and never
+// conflict; `pull --rebase` cleanly replays this device's commit on top.
 import { spawnSync } from "node:child_process";
 import { relative } from "node:path";
 import { DATA_DIR, REPO_ROOT } from "./config.mjs";

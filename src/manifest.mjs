@@ -1,5 +1,8 @@
 // Rebuilds data/manifest.json by scanning device folders.
 // The static page reads this to know which devices/sources exist.
+// This file is git-ignored: it's regenerated locally for `npm run serve`
+// and at deploy time by Vercel (src/build-manifest.mjs), so devices never
+// commit it and can't conflict on it.
 import { readdirSync, statSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { DATA_DIR } from "./config.mjs";

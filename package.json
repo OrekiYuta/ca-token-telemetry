@@ -6,7 +6,8 @@
   "description": "Multi-device token usage & cost dashboard for AI coding agents (OpenCode / Claude Code).",
   "scripts": {
     "collect": "node src/collect.mjs",
-    "serve": "npx --yes serve web -l 8000"
+    "build": "node src/build-manifest.mjs",
+    "serve": "npx --yes serve . -l 8000"
   },
   "dependencies": {
     "ccusage": "^20.0.17"
