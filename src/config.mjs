@@ -18,6 +18,7 @@ export const DEVICE_BY_HOST = {
   Elias: "r5-2600-gtx1660", // Windows desktop (Ryzen 5 2600 + GTX 1660)
   "MacBookPro.lan": "m1pro-32gb", // MacBook Pro 2021 (M1 Pro, 32GB)
   MacBookPro: "m1pro-32gb", // same Mac, in case hostname has no .lan suffix
+  "EliasMacPro.lan": "m1pro-32g", // local Mac hostname
 };
 
 // Empty payload written when a source has no local usage data.
