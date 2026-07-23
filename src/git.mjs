@@ -23,7 +23,7 @@ function git(args) {
  */
 export function publish(device, doPush) {
   if (git(["rev-parse", "--show-toplevel"]).status !== 0) {
-    console.log("==> not a git repo; skipping commit.");
+    console.log("==> skip commit (not a git repo)");
     return;
   }
 
@@ -32,15 +32,15 @@ export function publish(device, doPush) {
 
   // Nothing staged means no data changed.
   if (git(["diff", "--cached", "--quiet"]).status === 0) {
-    console.log("==> No data changes to commit.");
+    console.log("==> no changes");
     return;
   }
 
   git(["commit", "-m", `data: update ${device} token usage (${stamp()})`]);
-  console.log("==> Committed.");
+  console.log("==> commit");
 
   if (!doPush) {
-    console.log("==> (not pushed)");
+    console.log("==> skip push");
     return;
   }
 
@@ -51,5 +51,5 @@ export function publish(device, doPush) {
   }
 
   const pushed = git(["push"]).status === 0;
-  console.log(pushed ? "==> Pushed." : "==> Push failed (commit is saved locally).");
+  console.log(pushed ? "==> pushed" : "==> push failed (commit saved locally)");
 }
