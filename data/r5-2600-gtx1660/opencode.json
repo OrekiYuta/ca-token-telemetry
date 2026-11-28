@@ -4763,18 +4763,18 @@
       "costCapturedAt": "2026-11-28 03:00"
     },
     {
-      "cacheCreationTokens": 322102,
-      "cacheReadTokens": 9618858,
+      "cacheCreationTokens": 372981,
+      "cacheReadTokens": 9788860,
       "date": "2026-11-28",
-      "inputTokens": 594502,
+      "inputTokens": 594538,
       "modelBreakdowns": [
         {
-          "cacheCreationTokens": 322102,
-          "cacheReadTokens": 6173738,
-          "cost": 0.3121383600000001,
-          "inputTokens": 461242,
+          "cacheCreationTokens": 372981,
+          "cacheReadTokens": 6343740,
+          "cost": 0.3203711055000001,
+          "inputTokens": 461278,
           "modelName": "fusion",
-          "outputTokens": 14360
+          "outputTokens": 15532
         },
         {
           "cacheCreationTokens": 0,
@@ -4789,18 +4789,18 @@
         "fusion",
         "deepseek-v4.1-flash-free"
       ],
-      "outputTokens": 25646,
-      "totalCost": 0.35364091200000014,
-      "totalTokens": 10567815,
-      "costCapturedAt": "2026-11-28 03:00"
+      "outputTokens": 26818,
+      "totalCost": 0.3618736575000001,
+      "totalTokens": 10790900,
+      "costCapturedAt": "2026-11-29 03:00"
     }
   ],
   "totals": {
-    "inputTokens": 514160013,
-    "outputTokens": 24168314,
-    "cacheCreationTokens": 21877352,
-    "cacheReadTokens": 7290848868,
-    "totalTokens": 7856187709,
-    "totalCost": 4610.713364107601
+    "inputTokens": 514160049,
+    "outputTokens": 24169486,
+    "cacheCreationTokens": 21928231,
+    "cacheReadTokens": 7291018870,
+    "totalTokens": 7856410794,
+    "totalCost": 4610.721596853101
   }
 }
